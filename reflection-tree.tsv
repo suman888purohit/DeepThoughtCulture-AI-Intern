@@ -1,0 +1,32 @@
+id	parentId	type	text	options	target	signal
+START	null	start	Good evening. Let's reflect on your day.			
+
+Q1	START	question	How was your day?	Tough|Productive|Mixed|Frustrating		
+
+D1	Q1	decision		answer=Productive|Mixed:Q2A;answer=Tough|Frustrating:Q2B		
+
+Q2A	D1	question	When things went well, why?	I worked well|Team helped|Got lucky|Adapted		
+
+Q2B	D1	question	When things went wrong, what did you do?	Tried to fix|Waited for others|Felt stuck|Moved on		
+
+R1	Q2A	reflection	You showed control over your actions today.			
+
+R2	Q2B	reflection	You focused more on external factors today.	
+B1	R1	bridge	Now let's look at what you contributed today.		Q3	
+B2	R2	bridge	Now let's look at what you contributed today.		Q3	
+
+Q3	B1	question	What did you do for others today?	Helped someone|Did extra work|Focused only on my tasks|Expected recognition		
+
+Q4	Q3	question	During work, what mattered more?	Team success|My own work|Recognition|Just finishing tasks		
+
+R3	Q4	reflection	Today reflects how you approached contribution and expectations.			axis2:contribution
+B3	R3	bridge	Now let's reflect on your perspective beyond yourself.		Q5	
+
+Q5	B3	question	When you think about your day, who comes to mind most?	Only me|My team|A colleague|Customer or others		
+
+Q6	Q5	question	Your biggest concern today was about:	My stress|Team work|Helping someone|Delivering value		
+
+R4	Q6	reflection	Your awareness of others shapes your growth and mindset.			axis3:altro
+SUMMARY	R4	summary	Today you reflected on your actions, your contribution, and your perspective.			
+
+END	SUMMARY	end	Good job. See you tomorrow.					

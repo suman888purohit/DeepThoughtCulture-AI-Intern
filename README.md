@@ -47,7 +47,7 @@ Start → Axis 1 → Axis 2 → Axis 3 → Summary → End
 ## 📂 Project Files
 
 - `reflection-tree.tsv` → Main decision tree structure  
-- `tree-diagram.png` → Visual flow of the tree  
+- `Reflection and Contribution-2026-04-27-082532.png` → Visual flow of the tree  
 - `write-up.md` → Design explanation and reasoning  
 
 ---
